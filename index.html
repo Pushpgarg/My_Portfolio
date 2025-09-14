@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushp Garg - E-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Pushp Garg</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#achievements" class="nav-link">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#publications" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Pushp Garg</span></h1>
+                <p class="hero-subtitle">Research Student | ML Engineer | AI Innovator</p>
+                <p class="hero-description">
+                    Passionate about Machine Learning, Signal Processing, and AI research. Currently pursuing B.Tech Honours in Computer Science Engineering at IIIT Sri City with a focus on multi-modal data analysis and neuromuscular signal processing.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img src="pushp_photo.jpeg" alt="Pushp Garg" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user" style="display: none;"></i>
+                    </div>
+                    <h3>Pushp Garg</h3>
+                    <p>Research Student & ML Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a dedicated research student and Machine Learning engineer with a passion for AI and signal processing. 
+                        My journey in computer science has been driven by curiosity and a desire to solve real-world problems 
+                        through innovative technology solutions.
+                    </p>
+                    <p>
+                        Currently working as an Honours Research Student at IIIT Sri City, I focus on multi-modal data analysis 
+                        and neuromuscular signal processing. I believe in continuous learning and staying updated with the latest 
+                        technological advancements in AI and ML.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>9.27</h3>
+                            <p>CGPA</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Research Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3>2</h3>
+                            <p>Publications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>B.Tech Honours in Computer Science Engineering</h3>
+                        <h4>Indian Institute of Information Technology, Sri City</h4>
+                        <p class="timeline-date">August 2023 - Present</p>
+                        <p><strong>CGPA:</strong> 9.27/10</p>
+                        <p><strong>Thesis:</strong> Signal analysis from multi-modal data for harmonium players of different experience level</p>
+                        <p><strong>Key Subjects:</strong> Computer Programming, Data Structures and Algorithms, Machine Learning, Artificial Intelligence, Natural Language Processing, Database Management System, Operating Systems</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>All India Senior School Certificate Examination</h3>
+                        <h4>Shiksha Bharti Vidya Niketan, Kalayat</h4>
+                        <p class="timeline-date">April 2022 - March 2023</p>
+                        <p><strong>Final Grade:</strong> 93.8%</p>
+                        <p><strong>Subjects:</strong> Physics, Chemistry, Mathematics, Music, English</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>C</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>R</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning & AI</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Machine Learning</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Deep Learning</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Science & Libraries</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Signal Processing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience & Projects</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Human Movement Analysis Lab</h3>
+                        <span class="experience-type">Research</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>Honours Research Student</h4>
+                        <p class="experience-date">September 2024 - Present</p>
+                        <p>IIIT Sri City, Sri City, India</p>
+                        <p>Designed and executed a study to capture motor skills in harmonium players, creating a unique synchronized sEMG and audio dataset from 10 expert and novice participants.</p>
+                        <ul>
+                            <li>Developed novel feature-ranking methodology using Borda score and stability measures</li>
+                            <li>Implemented Particle Swarm Optimization (PSO) algorithm achieving >75% reduction in feature dimensionality</li>
+                            <li>Achieved 91.8% accuracy in differentiating skill levels</li>
+                            <li>Created robust model for neuromuscular feature classification</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Matrix Club, IIIT Sri City</h3>
+                        <span class="experience-type">Leadership</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>Machine Learning Domain Lead</h4>
+                        <p class="experience-date">August 2025 - Present</p>
+                        <p>Conducted sessions and mentored over 70+ students to start their journey in the field of AI & ML.</p>
+                        <ul>
+                            <li>Organized technical workshops and training sessions</li>
+                            <li>Mentored students in machine learning concepts</li>
+                            <li>Developed curriculum for AI/ML learning path</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Google Developers Group</h3>
+                        <span class="experience-type">Leadership</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>AI&ML Core Member</h4>
+                        <p class="experience-date">September 2024 - May 2025</p>
+                        <p>IIIT Sri City</p>
+                        <p>Coordinated and collaborated with club members and organized tech-based puzzle competition for 100+ teams during college annual tech fest "Utkristha".</p>
+                        <ul>
+                            <li>Organized large-scale tech competitions</li>
+                            <li>Collaborated with 100+ teams</li>
+                            <li>Developed puzzle-based learning activities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Agri-Intel: Crop Disease Classification</h3>
+                        <p>Developed a crop disease classification system using MobileNetV2, achieving 91.41% accuracy and an average F1-score of 90.69%. Curated and processed a dataset of 11-12k images covering 13 distinct crop disease classes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MobileNetV2</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Gemini-1.5-Flash</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Matrimonial Data Retrieval System</h3>
+                        <p>Architected a data extraction pipeline processing 100+ profiles from diverse sources using high-accuracy OCR. Integrated the Gemini-Flash 1.5 model for natural language query processing across multiple file formats (jpg, txt, pdf).</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">OCR</span>
+                            <span class="tech-tag">GenAI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-hand-rock"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Advanced Rock Paper Scissors</h3>
+                        <p>Engineered a voice-controlled gaming system using SpeechRecognition and gTTS libraries. Executed a Random Forest classifier hyper-parameters tuned using Grid search for gesture recognition with Precision: 92.6%, Recall: 100%, and F1 Score: 96.1%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Speech Recognition</span>
+                            <span class="tech-tag">Random Forest</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Pushpgarg/Rock-paper-scissors-advanced-version" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Pushpgarg/Rock-paper-scissors-advanced-version" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Awards</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Academic Excellence</h3>
+                        <p>Maintained exceptional CGPA of 9.27/10 in B.Tech Honours Computer Science Engineering at IIIT Sri City.</p>
+                        <span class="achievement-date">2023 - Present</span>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Research Publications</h3>
+                        <p>Published 2 research papers in IEEE conferences on neuromuscular signal processing and heart disease detection.</p>
+                        <span class="achievement-date">2025 - 2026</span>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Professional Certifications</h3>
+                        <p>Machine Learning A-Z: AI, Python & R (Udemy) and Supervised Machine Learning: Regression and Classification (Coursera).</p>
+                        <span class="achievement-date">2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Research Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3>Interpretable Neuromuscular Signatures of Bimanual Harmonium Skill via Multi-Stage Feature Selection and Surface-EMG</h3>
+                        <span class="publication-status">Under Review</span>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-authors">Pushp Garg, Anish C. Turlapaty, Purval Madhukar Bhude, Himangshu Sarma, Mrinmoy Ghorai</p>
+                        <p class="publication-venue">International Conference on Acoustics, Speech, and Signal Processing (ICASSP) | IEEE</p>
+                        <p class="publication-date">2026</p>
+                        <p class="publication-description">Novel research on neuromuscular signal processing for harmonium skill classification using multi-modal data analysis and advanced feature selection techniques.</p>
+                    </div>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3>A Novel Heuristic-Based Heart Disease Detection Framework for Imbalanced Dataset</h3>
+                        <span class="publication-status accepted">Accepted</span>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-authors">Pushp Garg, KG Raghvendra Narayan, Odelu Vanga</p>
+                        <p class="publication-venue">IEEE International Conference on Information and Communication Technology (CICT)</p>
+                        <p class="publication-date">2025</p>
+                        <p class="publication-description">Innovative framework for heart disease detection using heuristic-based approaches optimized for imbalanced medical datasets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflections Section -->
+    <section id="reflections" class="reflections">
+        <div class="container">
+            <h2 class="section-title">Personal Statement & Reflections</h2>
+            <div class="reflections-content">
+                <div class="reflection-card">
+                    <h3>My Journey in AI & Research</h3>
+                    <p>
+                        My journey in computer science began with a fascination for artificial intelligence and machine learning. 
+                        As an Honours Research Student at IIIT Sri City, I've developed a deep passion for signal processing 
+                        and multi-modal data analysis, particularly in the context of neuromuscular signal processing.
+                    </p>
+                    <p>
+                        I believe that AI and machine learning should be used to solve real-world problems and improve human lives. 
+                        My research focuses on understanding human motor skills through advanced signal processing techniques, 
+                        which has applications in rehabilitation, skill assessment, and human-computer interaction.
+                    </p>
+                </div>
+                <div class="reflection-card">
+                    <h3>Future Aspirations</h3>
+                    <p>
+                        I am excited about the future of AI, particularly in areas like biomedical signal processing, 
+                        human-computer interaction, and explainable AI. I plan to pursue advanced research in these areas 
+                        and contribute to the development of technologies that can help people with disabilities and 
+                        improve human performance.
+                    </p>
+                    <p>
+                        My ultimate goal is to become a leading researcher in AI and signal processing who can contribute 
+                        to meaningful projects that benefit society and mentor the next generation of AI researchers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Section -->
+    <section id="extracurricular" class="extracurricular">
+        <div class="container">
+            <h2 class="section-title">Extracurricular & Volunteering</h2>
+            <div class="extracurricular-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Student Organizations</h3>
+                        <p>Active member of computer science student organizations and coding clubs.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Volunteer Work</h3>
+                        <p>Participated in community service activities and technology workshops for students.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Study Groups</h3>
+                        <p>Organized and participated in study groups to help fellow students with programming concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>pushp.garg.ml@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(+91) 8950828475</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>IIIT Sri City, India</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/pushpgarg/" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Pushpgarg" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="pushp_NTU_resume.pdf" class="social-link" download>
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Pushp Garg. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

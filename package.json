@@ -1,0 +1,36 @@
+{
+  "name": "pushp-garg-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive e-portfolio website for Pushp Garg",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server .",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Deploy to your hosting platform'"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "responsive",
+    "html",
+    "css",
+    "javascript",
+    "student",
+    "developer"
+  ],
+  "author": "Pushp Garg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/pushp-garg-portfolio.git"
+  },
+  "homepage": "https://yourusername.github.io/pushp-garg-portfolio",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
