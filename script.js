@@ -94,6 +94,30 @@
     revealables.forEach(function (el) { revealObserver.observe(el); });
   }
 
+  // ---- Light / dark toggle ---------------------------------------------
+  // Follows the system setting until the visitor picks one; the choice is
+  // remembered on this device.
+  var root = document.documentElement;
+  var toggle = document.querySelector('.theme-toggle');
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  var currentTheme = function () {
+    return root.getAttribute('data-theme') || (systemDark.matches ? 'dark' : 'light');
+  };
+  var updateToggleLabel = function () {
+    var next = currentTheme() === 'dark' ? 'light' : 'dark';
+    toggle.setAttribute('aria-label', 'Switch to ' + next + ' mode');
+  };
+  if (toggle) {
+    updateToggleLabel();
+    toggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) { /* storage unavailable */ }
+      updateToggleLabel();
+    });
+    if (systemDark.addEventListener) systemDark.addEventListener('change', updateToggleLabel);
+  }
+
   // ---- Top bar border + current-section highlight ----------------------
   var topbar = document.querySelector('.topbar');
   var onScroll = function () { topbar.classList.toggle('scrolled', window.scrollY > 8); };

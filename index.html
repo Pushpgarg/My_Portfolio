@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -35,6 +35,8 @@
     <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
     <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h8M8 17h5"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
   </svg>
 
@@ -50,6 +52,10 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch light / dark mode">
+        <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+      </button>
       <!-- TODO: add cv.pdf to the repo root, then replace this span with <a class="cv-button" href="cv.pdf">CV</a> -->
       <span class="cv-button todo" title="CV PDF not added yet">CV [TODO]</span>
     </div>
@@ -79,7 +85,7 @@
       </figure>
     </section>
 
-    <div class="container signal-wrap" aria-hidden="true">
+    <div class="signal-wrap" aria-hidden="true">
       <svg class="signal" viewBox="0 0 1200 90" preserveAspectRatio="none">
         <line class="signal-base" x1="0" y1="45" x2="1200" y2="45"/>
         <path class="signal-trace" d="M0 45 L1200 45" pathLength="1"/>
@@ -92,7 +98,7 @@
         <span class="section-num">01</span>
         <h2>About</h2>
       </header>
-      <div class="section-body">
+      <div class="section-body about-grid">
         <div class="prose reveal">
           <p class="lead">I'm a final-year B.Tech (Honours) student in Computer Science at IIIT Sri City, specialising in AI/ML. Most of my work starts with data that needs a lot of understanding before it can be modelled: surface EMG recorded from musicians' forearms, videos of people signing, satellite images too large to fit in memory.</p>
           <p>In the Human Movement Analysis Lab, I study how experienced performers use their muscles differently from beginners, using sEMG and audio recorded from harmonium and flute players. In the HCI Lab, I built a recognition model for Indian Sign Language and worked on paraphrase detection. Since July 2026, I've been a deep learning and computer vision intern at Robodh, building visual search over satellite imagery for the AI Grand Challenge national finals.</p>

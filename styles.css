@@ -32,15 +32,44 @@
   --sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --container: 1120px;
-  --gutter: 32px;
+  --container: 1560px;
+  --gutter: clamp(20px, 4.5vw, 80px);
   --topbar-h: 64px;
   --radius: 14px;
   color-scheme: light;
 }
 
+:root[data-theme="dark"] {
+  --paper: #151412;
+  --paper-2: #1c1a17;
+  --card: #1e1c19;
+  --ink: #eee9e0;
+  --ink-2: #c3bcb0;
+  --ink-3: #8f887c;
+  --line: #2d2a26;
+  --line-strong: #3d3933;
+
+  --accent: #e3895a;
+  --accent-ink: #f0a47b;
+  --accent-soft: #34241b;
+
+  --bio: #e3895a;
+  --vis: #86b2df;
+  --lang: #97c18a;
+  --health: #d29cc6;
+
+  --todo-bg: #3a2f12;
+  --todo-line: #a78232;
+  --todo-ink: #f0d189;
+
+  --contact-bg: #0e0d0c;
+  --contact-ink: #f4efe6;
+  --contact-dim: #8f887c;
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --paper: #151412;
     --paper-2: #1c1a17;
     --card: #1e1c19;
@@ -179,7 +208,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   height: var(--topbar-h);
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .brand {
@@ -197,7 +226,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   background: var(--accent);
 }
 
-.topbar nav { margin-left: auto; }
+.topbar nav { margin-left: auto; margin-right: 4px; }
 .nav-links {
   display: flex;
   gap: 4px;
@@ -223,6 +252,30 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   transition: background-color 0.2s;
 }
 a.cv-button:hover { background: var(--accent); }
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--ink); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.theme-toggle .icon { width: 17px; height: 17px; }
+.icon-sun { display: none; }
+:root[data-theme="dark"] .icon-sun { display: block; }
+:root[data-theme="dark"] .icon-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .icon-moon { display: none; }
+}
 
 /* ==========================================================
    Hero
@@ -336,7 +389,12 @@ a.btn-solid:hover { background: var(--accent); border-color: var(--accent); colo
 .arch img { width: 100%; height: 100%; object-fit: cover; }
 
 /* sEMG-style trace under the hero */
-.signal-wrap { padding-top: 40px; padding-bottom: 8px; }
+.signal-wrap {
+  padding-top: 40px;
+  padding-bottom: 8px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
 .signal { width: 100%; height: 72px; display: block; overflow: visible; }
 .signal-base { stroke: var(--line); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .signal-trace {
@@ -532,13 +590,20 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-ink); }
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) + 4px);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .pub-featured .pub-title { font-family: var(--serif); font-weight: 400; font-size: 1.75rem; line-height: 1.15; letter-spacing: -0.01em; }
 
 /* Paper list */
-.pub-list .pub { padding: 26px 0; border-top: 1px solid var(--line); }
-.pub-list .pub:first-child { border-top: 0; }
+.pub-list { display: grid; gap: 16px; }
+.pub-list .pub {
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.25s;
+}
+.pub-list .pub:hover { border-color: var(--line-strong); }
 
 .pub-with-talk {
   display: grid;
@@ -817,6 +882,64 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-ink); }
 }
 
 /* ==========================================================
+   Wide screens
+   ========================================================== */
+@media (min-width: 1200px) {
+  body { font-size: 17px; }
+
+  .section { grid-template-columns: 250px minmax(0, 1fr); gap: 72px; }
+
+  .hero-portrait { max-width: 380px; }
+  .hero-lede { max-width: 20em; }
+
+  /* About: text beside the research-area cards */
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 64px;
+    align-items: start;
+  }
+  .about-grid .prose { max-width: 720px; }
+  .about-grid .themes { grid-template-columns: 1fr; margin-top: 4px; }
+  .about-grid .theme {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    column-gap: 18px;
+    align-items: center;
+  }
+  .about-grid .theme-art { grid-row: span 2; margin: 0; height: 44px; }
+
+  /* Papers two per row; the one with a talk spans the row */
+  .pub-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pub-list .pub-with-talk { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) 360px; gap: 36px; }
+
+  /* Horizontal timeline */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    padding-left: 0;
+    padding-top: 34px;
+  }
+  .timeline::before { left: 0; right: 0; top: 5px; bottom: auto; width: auto; height: 1px; }
+  .timeline li { padding-bottom: 0; }
+  .timeline li::before { left: 0; top: -34px; }
+
+  /* Skills as a 2 x 2 grid of cards */
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .skills > div {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-content: start;
+    padding: 22px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .skills dd span { background: var(--paper-2); border-color: transparent; }
+}
+
+/* ==========================================================
    Responsive
    ========================================================== */
 @media (max-width: 980px) {
@@ -831,7 +954,8 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-ink); }
 @media (max-width: 760px) {
   :root { --gutter: 20px; --topbar-h: 58px; }
   .topbar nav { display: none; }
-  .cv-button { margin-left: auto; }
+  .theme-toggle { margin-left: auto; }
+  .pub-list .pub { padding: 18px; }
 
   .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 40px; }
   .hero-portrait { order: -1; justify-self: start; max-width: 168px; }
