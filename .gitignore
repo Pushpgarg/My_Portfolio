@@ -53,3 +53,6 @@ build/
 *.bak
 *.backup
 *.old
+
+# Private source materials (papers, resume, transcripts, photos)
+materials/

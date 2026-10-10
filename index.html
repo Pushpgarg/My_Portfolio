@@ -1,602 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pushp Garg - E-Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pushp</title>
+  <meta name="description" content="Pushp — final-year CS student at IIIT Sri City working on machine learning for biosignals, vision, and language.">
+  <meta name="author" content="Pushp">
+  <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pushp">
+  <meta property="og:description" content="Final-year CS student, IIIT Sri City · Machine learning for biosignals, vision, and language">
+  <meta property="og:url" content="https://pushpgarg.github.io/">
+  <meta property="og:image" content="https://pushpgarg.github.io/images/pushp.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1b18'/%3E%3Ctext x='32' y='47' font-family='Georgia,serif' font-style='italic' font-size='42' text-anchor='middle' fill='%23f7f4ee'%3EP%3C/text%3E%3Ccircle cx='50' cy='46' r='4' fill='%23c2622f'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Pushp Garg</h2>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-scholar" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">Pushp<span class="brand-dot" aria-hidden="true"></span></a>
+      <nav aria-label="Sections">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- TODO: add cv.pdf to the repo root, then replace this span with <a class="cv-button" href="cv.pdf">CV</a> -->
+      <span class="cv-button todo" title="CV PDF not added yet">CV [TODO]</span>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== Hero ========== -->
+    <section class="hero container" id="top" aria-label="Introduction">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Looking for funded PhD positions · Fall 2027</p>
+        <h1 class="hero-name">Pushp</h1>
+        <p class="hero-role">Final-year CS student, IIIT Sri City</p>
+        <p class="hero-lede">Machine learning for <em class="t-bio">biosignals</em>, <em class="t-vis">vision</em>, and <em class="t-lang">language</em>.</p>
+        <ul class="hero-links">
+          <li><a class="btn btn-solid" href="mailto:pushp.garg.ml@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>Email</a></li>
+          <li><a class="btn" href="https://scholar.google.com/citations?user=VcZwpiIAAAAJ&amp;hl=en"><svg class="icon"><use href="#i-scholar"/></svg>Google Scholar</a></li>
+          <li><a class="btn" href="https://github.com/Pushpgarg"><svg class="icon"><use href="#i-github"/></svg>GitHub</a></li>
+          <li><a class="btn" href="https://www.linkedin.com/in/pushpgarg"><svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+          <li><span class="btn todo"><svg class="icon"><use href="#i-file"/></svg>CV [TODO]</span></li>
+        </ul>
+      </div>
+      <figure class="hero-portrait">
+        <div class="arch">
+          <img src="images/pushp.jpg" alt="Portrait of Pushp" width="560" height="700">
+        </div>
+      </figure>
+    </section>
+
+    <div class="container signal-wrap" aria-hidden="true">
+      <svg class="signal" viewBox="0 0 1200 90" preserveAspectRatio="none">
+        <line class="signal-base" x1="0" y1="45" x2="1200" y2="45"/>
+        <path class="signal-trace" d="M0 45 L1200 45" pathLength="1"/>
+      </svg>
+    </div>
+
+    <!-- ========== About ========== -->
+    <section class="section container" id="about">
+      <header class="section-label">
+        <span class="section-num">01</span>
+        <h2>About</h2>
+      </header>
+      <div class="section-body">
+        <div class="prose reveal">
+          <p class="lead">I'm a final-year B.Tech (Honours) student in Computer Science at IIIT Sri City, specialising in AI/ML. Most of my work starts with data that needs a lot of understanding before it can be modelled: surface EMG recorded from musicians' forearms, videos of people signing, satellite images too large to fit in memory.</p>
+          <p>In the Human Movement Analysis Lab, I study how experienced performers use their muscles differently from beginners, using sEMG and audio recorded from harmonium and flute players. In the HCI Lab, I built a recognition model for Indian Sign Language and worked on paraphrase detection. Since July 2026, I've been a deep learning and computer vision intern at Robodh, building visual search over satellite imagery for the AI Grand Challenge national finals.</p>
+          <p>I'm looking for funded PhD positions starting Fall 2027, and research internships before then.</p>
+          <p class="aside">Outside research, I play the harmonium. I've entered a few music competitions, though I wouldn't call myself an expert.</p>
+        </div>
+
+        <ul class="themes reveal" aria-label="Research areas">
+          <li class="theme theme-bio">
+            <svg class="theme-art" viewBox="0 0 160 56" aria-hidden="true">
+              <path d="M0 28 H22 l3 -4 3 9 3 -15 3 22 3 -26 3 20 3 -12 3 6 3 -2 H70 l2 -3 2 7 2 -12 2 16 2 -19 2 14 2 -8 2 4 H104 l3 -6 3 14 3 -22 3 26 3 -18 3 8 H160"/>
+            </svg>
+            <h3>Biosignals</h3>
+            <p>sEMG and audio from harmonium and flute players</p>
+          </li>
+          <li class="theme theme-vis">
+            <svg class="theme-art" viewBox="0 0 160 56" aria-hidden="true">
+              <g class="edges"><path d="M80 8 L80 24 L60 30 L48 44 M80 24 L100 30 L112 44 M80 24 L80 46 M48 44 L40 50 M48 44 L44 52 M112 44 L120 50 M112 44 L116 52"/></g>
+              <g class="nodes"><circle cx="80" cy="8" r="3.2"/><circle cx="80" cy="24" r="2.6"/><circle cx="60" cy="30" r="2.6"/><circle cx="100" cy="30" r="2.6"/><circle cx="48" cy="44" r="2.6"/><circle cx="112" cy="44" r="2.6"/><circle cx="80" cy="46" r="2.6"/><circle cx="40" cy="50" r="1.8"/><circle cx="44" cy="52" r="1.8"/><circle cx="120" cy="50" r="1.8"/><circle cx="116" cy="52" r="1.8"/></g>
+            </svg>
+            <h3>Vision</h3>
+            <p>Indian Sign Language recognition and satellite image retrieval</p>
+          </li>
+          <li class="theme theme-lang">
+            <svg class="theme-art" viewBox="0 0 160 56" aria-hidden="true">
+              <rect x="14" y="12" width="30" height="12" rx="3"/><rect x="48" y="12" width="20" height="12" rx="3"/><rect x="72" y="12" width="38" height="12" rx="3"/><rect x="114" y="12" width="26" height="12" rx="3"/>
+              <rect x="22" y="32" width="24" height="12" rx="3"/><rect x="50" y="32" width="34" height="12" rx="3"/><rect x="88" y="32" width="18" height="12" rx="3"/><rect x="110" y="32" width="30" height="12" rx="3"/>
+              <path class="links" d="M29 24 L34 32 M58 24 L67 32 M91 24 L97 32 M127 24 L125 32"/>
+            </svg>
+            <h3>Language</h3>
+            <p>Paraphrase detection, intent classifiers, and LLM output bias</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Research & Publications ========== -->
+    <section class="section container" id="research">
+      <header class="section-label">
+        <span class="section-num">02</span>
+        <h2>Research &amp; Publications</h2>
+      </header>
+      <div class="section-body">
+
+        <h3 class="group-title">Published</h3>
+
+        <!-- Featured: CGI 2026 with London talk -->
+        <article class="pub pub-featured reveal">
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="venue t-vis">CGI 2026</span>
+              <span class="tag">Vision</span>
+              <span class="tag">First &amp; corresponding author</span>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#achievements" class="nav-link">Achievements</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#publications" class="nav-link">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <h4 class="pub-title">A Hybrid Kinematic GCN and Elastic Transformer for Efficient Indian Sign Language Recognition</h4>
+            <p class="pub-authors"><strong>Pushp</strong>, Himangshu Sarma, Mrinmoy Ghorai</p>
+            <p class="pub-where"><em>Computer Graphics International (CGI) 2026</em>, Lecture Notes in Computer Science, Springer</p>
+            <p class="pub-desc">We collected a 120-class Indian Sign Language dataset of 9,453 videos and built a model that reaches 89.8% accuracy on it. An entropy-driven SVD sampler drops redundant frames (68.6% fewer), an Elastic Transformer with continuous dual positional encodings handles the temporal side, and a kinematically conditioned adaptive GCN models the hand and body skeleton.</p>
+            <ul class="pub-links">
+              <li><span class="chip todo">Paper [TODO]</span></li>
+              <li><span class="chip todo">arXiv [TODO: coming soon]</span></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+          </div>
+          <a class="video-facade" href="https://youtu.be/3uadZW6pd4I" data-video="3uadZW6pd4I" data-title="CGI 2026 paper presentation, London">
+            <img src="https://i.ytimg.com/vi/3uadZW6pd4I/hqdefault.jpg" alt="Pushp presenting at CGI 2026 in London" width="480" height="360" loading="lazy">
+            <span class="play"><svg><use href="#i-play"/></svg></span>
+            <span class="video-caption">Conference talk · London, 2026</span>
+          </a>
+        </article>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Pushp Garg</span></h1>
-                <p class="hero-subtitle">Research Student | ML Engineer | AI Innovator</p>
-                <p class="hero-description">
-                    Passionate about Machine Learning, Signal Processing, and AI research. Currently pursuing B.Tech Honours in Computer Science Engineering at IIIT Sri City with a focus on multi-modal data analysis and neuromuscular signal processing.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary">Learn More</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
+        <div class="pub-list">
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <span class="venue t-bio">EMBC 2026</span>
+              <span class="tag">Biosignals</span>
             </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-img">
-                        <img src="pushp_photo.jpeg" alt="Pushp Garg" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <i class="fas fa-user" style="display: none;"></i>
-                    </div>
-                    <h3>Pushp Garg</h3>
-                    <p>Research Student & ML Engineer</p>
-                </div>
+            <h4 class="pub-title">Neuromuscular Strategy Extraction from Harmonium Performance via sEMG</h4>
+            <p class="pub-authors"><strong>Pushp</strong>, Anish C. Turlapaty, Purval Bhude, Himangshu Sarma, Mrinmoy Ghorai, Balakrishna Gokaraju</p>
+            <p class="pub-where"><em>IEEE Engineering in Medicine and Biology Conference (EMBC) 2026</em></p>
+            <p class="pub-desc clamp">I designed and ran the sEMG data collection with 10 harmonium players, built the synchronised sEMG–audio processing pipeline, and developed a Borda-aggregation feature ranking method combined with PSO-based feature selection to find which muscle features separate players. A 22-feature signature reached 91.8% accuracy, using 75% fewer features than the full set.</p>
+            <ul class="pub-links">
+              <li><span class="chip todo">Paper [TODO]</span></li>
+            </ul>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <span class="venue t-bio">EMBC 2026</span>
+              <span class="tag">Biosignals</span>
             </div>
+            <h4 class="pub-title">Neuromuscular Efficiency in Indian Classical Flute Performance: A Multimodal EMG Pilot Study</h4>
+            <p class="pub-authors">Purval Bhude, Anish C. Turlapaty, <strong>Pushp</strong>, Balakrishna Gokaraju</p>
+            <p class="pub-where"><em>IEEE Engineering in Medicine and Biology Conference (EMBC) 2026</em></p>
+            <p class="pub-desc clamp">I co-designed the sEMG study protocol for flute performers and worked on the signal analysis pipeline. The study covers 288 trials from four performers, with sEMG, heart rate, audio, and video recorded together.</p>
+            <ul class="pub-links">
+              <li><span class="chip todo">Paper [TODO]</span></li>
+            </ul>
+          </article>
+
+          <article class="pub pub-with-talk reveal">
+            <div class="pub-main">
+              <div class="pub-meta">
+                <span class="venue t-health">CICT 2025</span>
+                <span class="tag">Medical ML</span>
+              </div>
+              <h4 class="pub-title">A Novel Heuristic-Based Heart Disease Detection Framework for Imbalanced Dataset</h4>
+              <p class="pub-authors"><strong>Pushp</strong>, KG Raghavendra Narayan, Vanga Odelu</p>
+              <p class="pub-where"><em>IEEE 9th International Conference on Information and Communication Technology (CICT) 2025</em></p>
+              <p class="pub-desc clamp">A three-stage framework for classifying heart disease severity on the imbalanced Cleveland dataset: class resampling, a tree of four Random Forest classifiers, and a recall-weighted fusion rule that prioritises severe cases. It reached 77.44% accuracy.</p>
+              <ul class="pub-links">
+                <li><a class="chip" href="https://doi.org/10.1109/cict67193.2025.11398983">Paper<svg class="icon-sm"><use href="#i-arrow"/></svg></a></li>
+              </ul>
+            </div>
+            <a class="video-facade video-facade-sm" href="https://youtu.be/OjUqpkEsLD0" data-video="OjUqpkEsLD0" data-title="IEEE CICT 2025 paper presentation">
+              <img src="https://i.ytimg.com/vi/OjUqpkEsLD0/hqdefault.jpg" alt="Pushp presenting at IEEE CICT 2025" width="480" height="360" loading="lazy">
+              <span class="play"><svg><use href="#i-play"/></svg></span>
+              <span class="video-caption">Talk · Kanchipuram, 2025</span>
+            </a>
+          </article>
         </div>
+
+        <h3 class="group-title">Under review and preprints</h3>
+
+        <div class="pub-list">
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <span class="venue t-lang">TMLR</span>
+              <span class="status">Under review</span>
+              <span class="tag">Language</span>
+            </div>
+            <h4 class="pub-title">R-DEIM Net: An Efficient Rationale-Augmented Dual-Expert Interaction Model for Paraphrase Detection</h4>
+            <p class="pub-authors"><strong>Pushp</strong>, Vaibhav Prajapati, Himangshu Sarma</p>
+            <p class="pub-where">Under review at <em>Transactions on Machine Learning Research (TMLR)</em></p>
+            <p class="pub-desc clamp">A 76M-parameter model for paraphrase detection that pairs a token-interaction expert with a Flan-T5-small decoder that generates rationales. It reaches 90.07% accuracy on Quora Question Pairs.</p>
+            <ul class="pub-links">
+              <li><a class="chip" href="https://arxiv.org/abs/2609.30100">arXiv<svg class="icon-sm"><use href="#i-arrow"/></svg></a></li>
+            </ul>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <span class="venue t-lang">Preprint</span>
+              <span class="tag">Language</span>
+            </div>
+            <h4 class="pub-title">Does Personalization Break Trust? Open-Set Rejection Calibration Under Few-Shot On-Device Intent Adaptation</h4>
+            <p class="pub-authors">Vaibhav Prajapati, <strong>Pushp</strong></p>
+            <p class="pub-where">Preprint, arXiv submission pending</p>
+            <p class="pub-desc clamp">When an intent classifier is personalised to a user with LoRA on a few examples, its in-scope accuracy goes up, but it gets worse at rejecting out-of-scope inputs. We measure how much open-set rejection calibration degrades under this kind of adaptation.</p>
+            <ul class="pub-links">
+              <li><span class="chip todo">arXiv [TODO]</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="group-title">Ongoing work</h3>
+
+        <ul class="ongoing">
+          <li class="ongoing-card reveal">
+            <span class="ongoing-kicker t-lang">Language · in progress</span>
+            <h4>Output bias in large language models</h4>
+            <p>A study of a systematic output bias across several LLMs, including mechanistic analysis.</p>
+          </li>
+          <li class="ongoing-card reveal">
+            <span class="ongoing-kicker t-bio">Biosignals</span>
+            <h4>Beginner vs. experienced harmonium players</h4>
+            <p>A follow-up to the EMBC harmonium paper comparing 5 beginner and 5 experienced players using sEMG and audio together.</p>
+            <a class="ongoing-link" href="https://github.com/Pushpgarg/Harmonoium_begineer_vs_experienced_analysis"><svg class="icon"><use href="#i-github"/></svg>Code</a>
+          </li>
+          <li class="ongoing-card reveal">
+            <span class="ongoing-kicker t-bio">Biosignals · mentoring</span>
+            <h4>sEMG and esports performance</h4>
+            <p>I'm mentoring an undergraduate student on a study measuring forearm sEMG during FPS gameplay under different physical warm-up conditions.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a dedicated research student and Machine Learning engineer with a passion for AI and signal processing. 
-                        My journey in computer science has been driven by curiosity and a desire to solve real-world problems 
-                        through innovative technology solutions.
-                    </p>
-                    <p>
-                        Currently working as an Honours Research Student at IIIT Sri City, I focus on multi-modal data analysis 
-                        and neuromuscular signal processing. I believe in continuous learning and staying updated with the latest 
-                        technological advancements in AI and ML.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>9.27</h3>
-                            <p>CGPA</p>
-                        </div>
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Research Projects</p>
-                        </div>
-                        <div class="stat">
-                            <h3>2</h3>
-                            <p>Publications</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-code"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ========== Experience ========== -->
+    <section class="section container" id="experience">
+      <header class="section-label">
+        <span class="section-num">03</span>
+        <h2>Experience</h2>
+      </header>
+      <div class="section-body">
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="tl-date">Jul 2026 — present</span>
+            <h3 class="tl-role">Deep Learning and Computer Vision Intern</h3>
+            <p class="tl-org">Robodh</p>
+            <p class="tl-desc">Building visual search and retrieval for satellite imagery as part of the AI Grand Challenge national finals, a Defence Ministry initiative. The pipeline processes large TIF images with ViT-style tiling, and I've worked on profiling and speeding up PyTorch inference on an H200 GPU.</p>
+          </li>
+          <li class="reveal">
+            <span class="tl-date">Aug 2025 — present</span>
+            <h3 class="tl-role">Research Intern</h3>
+            <p class="tl-org">HCI Lab, IIIT Sri City</p>
+            <p class="tl-desc">Indian Sign Language recognition (CGI 2026) and paraphrase detection (TMLR, under review).</p>
+          </li>
+          <li class="reveal">
+            <span class="tl-date">Sep 2024 — present</span>
+            <h3 class="tl-role">Honours Research Student</h3>
+            <p class="tl-org">Human Movement Analysis Lab, IIIT Sri City</p>
+            <p class="tl-desc">sEMG studies of musical performance (harmonium, flute) and motor skill.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>B.Tech Honours in Computer Science Engineering</h3>
-                        <h4>Indian Institute of Information Technology, Sri City</h4>
-                        <p class="timeline-date">August 2023 - Present</p>
-                        <p><strong>CGPA:</strong> 9.27/10</p>
-                        <p><strong>Thesis:</strong> Signal analysis from multi-modal data for harmonium players of different experience level</p>
-                        <p><strong>Key Subjects:</strong> Computer Programming, Data Structures and Algorithms, Machine Learning, Artificial Intelligence, Natural Language Processing, Database Management System, Operating Systems</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>All India Senior School Certificate Examination</h3>
-                        <h4>Shiksha Bharti Vidya Niketan, Kalayat</h4>
-                        <p class="timeline-date">April 2022 - March 2023</p>
-                        <p><strong>Final Grade:</strong> 93.8%</p>
-                        <p><strong>Subjects:</strong> Physics, Chemistry, Mathematics, Music, English</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ========== Education ========== -->
+    <section class="section container" id="education">
+      <header class="section-label">
+        <span class="section-num">04</span>
+        <h2>Education</h2>
+      </header>
+      <div class="section-body">
+        <article class="edu-card reveal">
+          <div class="edu-text">
+            <span class="tl-date">2023 — 2027 (expected June 2027)</span>
+            <h3>B.Tech (Honours) in Computer Science and Engineering, AI/ML specialisation</h3>
+            <p>Indian Institute of Information Technology (IIIT) Sri City, India</p>
+          </div>
+          <div class="edu-grade">
+            <span class="edu-grade-num">9.13<span>/10</span></span>
+            <span class="edu-grade-label">CGPA after six semesters</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>C</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>R</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Machine Learning & AI</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Machine Learning</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Deep Learning</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>PyTorch</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>TensorFlow</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Science & Libraries</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>NumPy</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Pandas</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Scikit-learn</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Signal Processing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ========== Skills ========== -->
+    <section class="section container" id="skills">
+      <header class="section-label">
+        <span class="section-num">05</span>
+        <h2>Skills</h2>
+      </header>
+      <div class="section-body">
+        <dl class="skills reveal">
+          <div>
+            <dt>Languages</dt>
+            <dd><span>Python</span><span>C</span><span>C++</span><span>SQL</span></dd>
+          </div>
+          <div>
+            <dt>ML</dt>
+            <dd><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Hugging Face Transformers</span><span>LoRA/PEFT fine-tuning</span><span>graph neural networks</span></dd>
+          </div>
+          <div>
+            <dt>Signals and data</dt>
+            <dd><span>sEMG acquisition and processing</span><span>human-subject experiment design</span><span>NumPy</span><span>pandas</span></dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd><span>Git</span><span>Linux</span><span>LaTeX</span></dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience & Projects</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>Human Movement Analysis Lab</h3>
-                        <span class="experience-type">Research</span>
-                    </div>
-                    <div class="experience-content">
-                        <h4>Honours Research Student</h4>
-                        <p class="experience-date">September 2024 - Present</p>
-                        <p>IIIT Sri City, Sri City, India</p>
-                        <p>Designed and executed a study to capture motor skills in harmonium players, creating a unique synchronized sEMG and audio dataset from 10 expert and novice participants.</p>
-                        <ul>
-                            <li>Developed novel feature-ranking methodology using Borda score and stability measures</li>
-                            <li>Implemented Particle Swarm Optimization (PSO) algorithm achieving >75% reduction in feature dimensionality</li>
-                            <li>Achieved 91.8% accuracy in differentiating skill levels</li>
-                            <li>Created robust model for neuromuscular feature classification</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>Matrix Club, IIIT Sri City</h3>
-                        <span class="experience-type">Leadership</span>
-                    </div>
-                    <div class="experience-content">
-                        <h4>Machine Learning Domain Lead</h4>
-                        <p class="experience-date">August 2025 - Present</p>
-                        <p>Conducted sessions and mentored over 70+ students to start their journey in the field of AI & ML.</p>
-                        <ul>
-                            <li>Organized technical workshops and training sessions</li>
-                            <li>Mentored students in machine learning concepts</li>
-                            <li>Developed curriculum for AI/ML learning path</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>Google Developers Group</h3>
-                        <span class="experience-type">Leadership</span>
-                    </div>
-                    <div class="experience-content">
-                        <h4>AI&ML Core Member</h4>
-                        <p class="experience-date">September 2024 - May 2025</p>
-                        <p>IIIT Sri City</p>
-                        <p>Coordinated and collaborated with club members and organized tech-based puzzle competition for 100+ teams during college annual tech fest "Utkristha".</p>
-                        <ul>
-                            <li>Organized large-scale tech competitions</li>
-                            <li>Collaborated with 100+ teams</li>
-                            <li>Developed puzzle-based learning activities</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- ========== Contact ========== -->
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-head">
+          <span class="section-num">06</span>
+          <h2>Contact</h2>
         </div>
+        <a class="contact-email" href="mailto:pushp.garg.ml@gmail.com">pushp.garg.ml@gmail.com</a>
+        <ul class="contact-links">
+          <li><a href="https://github.com/Pushpgarg"><svg class="icon"><use href="#i-github"/></svg>github.com/Pushpgarg</a></li>
+          <li><a href="https://scholar.google.com/citations?user=VcZwpiIAAAAJ&amp;hl=en"><svg class="icon"><use href="#i-scholar"/></svg>Google Scholar</a></li>
+          <li><a href="https://www.linkedin.com/in/pushpgarg"><svg class="icon"><use href="#i-linkedin"/></svg>linkedin.com/in/pushpgarg</a></li>
+          <li><span class="todo"><svg class="icon"><use href="#i-file"/></svg>CV [TODO]</span></li>
+        </ul>
+        <footer class="footer">
+          <span>© 2026 Pushp</span>
+          <span>Last updated October 2026</span>
+        </footer>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Agri-Intel: Crop Disease Classification</h3>
-                        <p>Developed a crop disease classification system using MobileNetV2, achieving 91.41% accuracy and an average F1-score of 90.69%. Curated and processed a dataset of 11-12k images covering 13 distinct crop disease classes.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">MobileNetV2</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Gemini-1.5-Flash</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Matrimonial Data Retrieval System</h3>
-                        <p>Architected a data extraction pipeline processing 100+ profiles from diverse sources using high-accuracy OCR. Integrated the Gemini-Flash 1.5 model for natural language query processing across multiple file formats (jpg, txt, pdf).</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">OCR</span>
-                            <span class="tech-tag">GenAI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-hand-rock"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Advanced Rock Paper Scissors</h3>
-                        <p>Engineered a voice-controlled gaming system using SpeechRecognition and gTTS libraries. Executed a Random Forest classifier hyper-parameters tuned using Grid search for gesture recognition with Precision: 92.6%, Recall: 100%, and F1 Score: 96.1%.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ML</span>
-                            <span class="tech-tag">Speech Recognition</span>
-                            <span class="tech-tag">Random Forest</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Pushpgarg/Rock-paper-scissors-advanced-version" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Pushpgarg/Rock-paper-scissors-advanced-version" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </main>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & Awards</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Academic Excellence</h3>
-                        <p>Maintained exceptional CGPA of 9.27/10 in B.Tech Honours Computer Science Engineering at IIIT Sri City.</p>
-                        <span class="achievement-date">2023 - Present</span>
-                    </div>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Research Publications</h3>
-                        <p>Published 2 research papers in IEEE conferences on neuromuscular signal processing and heart disease detection.</p>
-                        <span class="achievement-date">2025 - 2026</span>
-                    </div>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Professional Certifications</h3>
-                        <p>Machine Learning A-Z: AI, Python & R (Udemy) and Supervised Machine Learning: Regression and Classification (Coursera).</p>
-                        <span class="achievement-date">2024</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Research Publications</h2>
-            <div class="publications-grid">
-                <div class="publication-card">
-                    <div class="publication-header">
-                        <h3>Interpretable Neuromuscular Signatures of Bimanual Harmonium Skill via Multi-Stage Feature Selection and Surface-EMG</h3>
-                        <span class="publication-status">Under Review</span>
-                    </div>
-                    <div class="publication-content">
-                        <p class="publication-authors">Pushp Garg, Anish C. Turlapaty, Purval Madhukar Bhude, Himangshu Sarma, Mrinmoy Ghorai</p>
-                        <p class="publication-venue">International Conference on Acoustics, Speech, and Signal Processing (ICASSP) | IEEE</p>
-                        <p class="publication-date">2026</p>
-                        <p class="publication-description">Novel research on neuromuscular signal processing for harmonium skill classification using multi-modal data analysis and advanced feature selection techniques.</p>
-                    </div>
-                </div>
-                <div class="publication-card">
-                    <div class="publication-header">
-                        <h3>A Novel Heuristic-Based Heart Disease Detection Framework for Imbalanced Dataset</h3>
-                        <span class="publication-status accepted">Accepted</span>
-                    </div>
-                    <div class="publication-content">
-                        <p class="publication-authors">Pushp Garg, KG Raghvendra Narayan, Odelu Vanga</p>
-                        <p class="publication-venue">IEEE International Conference on Information and Communication Technology (CICT)</p>
-                        <p class="publication-date">2025</p>
-                        <p class="publication-description">Innovative framework for heart disease detection using heuristic-based approaches optimized for imbalanced medical datasets.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reflections Section -->
-    <section id="reflections" class="reflections">
-        <div class="container">
-            <h2 class="section-title">Personal Statement & Reflections</h2>
-            <div class="reflections-content">
-                <div class="reflection-card">
-                    <h3>My Journey in AI & Research</h3>
-                    <p>
-                        My journey in computer science began with a fascination for artificial intelligence and machine learning. 
-                        As an Honours Research Student at IIIT Sri City, I've developed a deep passion for signal processing 
-                        and multi-modal data analysis, particularly in the context of neuromuscular signal processing.
-                    </p>
-                    <p>
-                        I believe that AI and machine learning should be used to solve real-world problems and improve human lives. 
-                        My research focuses on understanding human motor skills through advanced signal processing techniques, 
-                        which has applications in rehabilitation, skill assessment, and human-computer interaction.
-                    </p>
-                </div>
-                <div class="reflection-card">
-                    <h3>Future Aspirations</h3>
-                    <p>
-                        I am excited about the future of AI, particularly in areas like biomedical signal processing, 
-                        human-computer interaction, and explainable AI. I plan to pursue advanced research in these areas 
-                        and contribute to the development of technologies that can help people with disabilities and 
-                        improve human performance.
-                    </p>
-                    <p>
-                        My ultimate goal is to become a leading researcher in AI and signal processing who can contribute 
-                        to meaningful projects that benefit society and mentor the next generation of AI researchers.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Extracurricular Section -->
-    <section id="extracurricular" class="extracurricular">
-        <div class="container">
-            <h2 class="section-title">Extracurricular & Volunteering</h2>
-            <div class="extracurricular-grid">
-                <div class="activity-card">
-                    <div class="activity-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="activity-content">
-                        <h3>Student Organizations</h3>
-                        <p>Active member of computer science student organizations and coding clubs.</p>
-                    </div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <div class="activity-content">
-                        <h3>Volunteer Work</h3>
-                        <p>Participated in community service activities and technology workshops for students.</p>
-                    </div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="activity-content">
-                        <h3>Study Groups</h3>
-                        <p>Organized and participated in study groups to help fellow students with programming concepts.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>pushp.garg.ml@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>(+91) 8950828475</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>IIIT Sri City, India</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/pushpgarg/" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Pushpgarg" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="pushp_NTU_resume.pdf" class="social-link" download>
-                            <i class="fas fa-file-pdf"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 Pushp Garg. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
