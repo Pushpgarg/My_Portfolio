@@ -118,47 +118,6 @@
     if (systemDark.addEventListener) systemDark.addEventListener('change', updateToggleLabel);
   }
 
-  // ---- Accent colour picker -------------------------------------------
-  var accentToggle = document.querySelector('.accent-toggle');
-  var accentMenu = document.getElementById('accent-menu');
-  if (accentToggle && accentMenu) {
-    var swatches = accentMenu.querySelectorAll('.swatch');
-    var markSelected = function () {
-      var current = root.getAttribute('data-accent') || 'sienna';
-      swatches.forEach(function (sw) {
-        sw.setAttribute('aria-checked', String(sw.dataset.accent === current));
-      });
-    };
-    var setMenu = function (open) {
-      accentMenu.hidden = !open;
-      accentToggle.setAttribute('aria-expanded', String(open));
-    };
-    markSelected();
-
-    accentToggle.addEventListener('click', function (event) {
-      event.stopPropagation();
-      setMenu(accentMenu.hidden);
-    });
-    swatches.forEach(function (sw) {
-      sw.addEventListener('click', function () {
-        var accent = sw.dataset.accent;
-        if (accent === 'sienna') root.removeAttribute('data-accent');
-        else root.setAttribute('data-accent', accent);
-        try { localStorage.setItem('accent', accent); } catch (e) { /* storage unavailable */ }
-        markSelected();
-      });
-    });
-    document.addEventListener('click', function (event) {
-      if (!accentMenu.hidden && !accentMenu.contains(event.target)) setMenu(false);
-    });
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && !accentMenu.hidden) {
-        setMenu(false);
-        accentToggle.focus();
-      }
-    });
-  }
-
   // ---- Top bar border + current-section highlight ----------------------
   var topbar = document.querySelector('.topbar');
   var onScroll = function () { topbar.classList.toggle('scrolled', window.scrollY > 8); };
